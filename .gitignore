@@ -1,0 +1,12 @@
+*.apk
+*.ap_
+*.iml
+*.ipr
+*.iws
+.gradle
+/gradlew
+/gradlew.bat
+/local.properties
+/.navigation
+/.idea/
+/build
