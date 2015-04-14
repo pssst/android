@@ -1,5 +1,5 @@
-Pssst for Android
-=================
+Android
+=======
 This is the official Pssst Android client.
 
 Pssst is a simple and secure way to exchange information. We do not provide
