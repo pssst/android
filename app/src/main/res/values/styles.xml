@@ -4,6 +4,7 @@
         <item name="android:actionBarStyle">@style/AppActionBar</item>
     </style>
     <style name="AppActionBar" parent="android:Widget.DeviceDefault.ActionBar">
+        <item name="android:background">@color/highlight</item>
         <item name="android:displayOptions">showTitle</item>
     </style>
 </resources>

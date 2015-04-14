@@ -97,7 +97,7 @@ public class Pull extends Activity {
         //noinspection ConstantConditions
         actionbar.setTitle(mPssst.getUsername());
         actionbar.setDisplayShowHomeEnabled(true);
-        actionbar.setIcon(R.mipmap.ic_actionbar);
+        actionbar.setIcon(R.mipmap.ic_title);
 
         mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mConnectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);

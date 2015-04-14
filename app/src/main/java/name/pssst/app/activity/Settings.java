@@ -41,7 +41,7 @@ public class Settings extends Activity {
         //noinspection ConstantConditions
         actionbar.setTitle(getResources().getString(R.string.app_name));
         actionbar.setDisplayShowHomeEnabled(true);
-        actionbar.setIcon(R.mipmap.ic_actionbar);
+        actionbar.setIcon(R.mipmap.ic_title);
 
         getFragmentManager().beginTransaction().replace(android.R.id.content, new name.pssst.app.fragment.Settings()).commit();
     }

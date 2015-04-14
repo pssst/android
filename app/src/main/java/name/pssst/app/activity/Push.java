@@ -51,7 +51,7 @@ public class Push extends Activity {
         //noinspection ConstantConditions
         actionbar.setTitle(pssst.getUsername());
         actionbar.setDisplayShowHomeEnabled(true);
-        actionbar.setIcon(R.mipmap.ic_actionbar);
+        actionbar.setIcon(R.mipmap.ic_title);
 
         // Preselect receiver
         if (extras != null) {

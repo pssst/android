@@ -56,7 +56,7 @@ public class Login extends Activity {
         //noinspection ConstantConditions
         actionbar.setTitle(getResources().getString(R.string.app_name));
         actionbar.setDisplayShowHomeEnabled(true);
-        actionbar.setIcon(R.mipmap.ic_actionbar);
+        actionbar.setIcon(R.mipmap.ic_title);
 
         final App app = (App) getApplication();
 
