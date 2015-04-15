@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.app.activity;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -43,7 +43,8 @@ public class Settings extends Activity {
         actionbar.setDisplayShowHomeEnabled(true);
         actionbar.setIcon(R.mipmap.ic_title);
 
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new name.pssst.app.fragment.Settings()).commit();
+        final Fragment settings = new name.pssst.app.fragment.Settings();
+        getFragmentManager().beginTransaction().replace(android.R.id.content, settings).commit();
     }
 
     /**

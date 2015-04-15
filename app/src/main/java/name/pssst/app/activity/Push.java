@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.app.activity;
 
 import android.app.ActionBar;
@@ -81,15 +80,8 @@ public class Push extends Activity {
      */
     private boolean isInputValid() {
         final String receiver = ((EditText) findViewById(R.id.receiver)).getText().toString();
-        if (receiver == null || receiver.isEmpty()) {
-            return false;
-        }
-
         final String message = ((EditText) findViewById(R.id.message)).getText().toString();
-        if (message == null || message.isEmpty()) {
-            return false;
-        }
 
-        return true;
+        return !receiver.isEmpty() && !message.isEmpty();
     }
 }

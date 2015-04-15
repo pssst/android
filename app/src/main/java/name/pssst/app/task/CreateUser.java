@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.app.task;
 
 import android.app.Activity;
@@ -32,7 +31,7 @@ import name.pssst.app.R;
  * Create user task.
  */
 public class CreateUser extends AsyncTask<Void, Void, Pssst> {
-    public static enum Mode {
+    public enum Mode {
         CREATE, LOGIN
     }
 

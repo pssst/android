@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.api.internal;
 
 import java.io.BufferedOutputStream;
@@ -35,7 +34,7 @@ public final class Request {
     private final HttpURLConnection mConnection;
     private final String mContent;
 
-    public static enum Method {
+    public enum Method {
         POST, GET, PUT, DELETE
     }
 

@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.api.internal;
 
 import org.json.JSONObject;
@@ -271,10 +270,6 @@ public final class RequestProvider {
         }
 
         // Check if response data is correct
-        if (!api.verify(data, rsaData)) {
-            return false;
-        }
-
-        return true;
+        return api.verify(data, rsaData);
     }
 }

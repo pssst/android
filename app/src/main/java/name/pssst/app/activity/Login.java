@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.app.activity;
 
 import android.app.ActionBar;
@@ -160,15 +159,8 @@ public class Login extends Activity {
      */
     private boolean isInputValid() {
         final String username = ((EditText) findViewById(R.id.username)).getText().toString();
-        if (username == null || username.isEmpty()) {
-            return false;
-        }
-
         final String password = ((EditText) findViewById(R.id.password)).getText().toString();
-        if (password == null || password.isEmpty()) {
-            return false;
-        }
 
-        return true;
+        return !username.isEmpty() && !password.isEmpty();
     }
 }

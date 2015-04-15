@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package name.pssst.app.activity;
 
 import android.app.ActionBar;
@@ -47,6 +46,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 import name.pssst.api.Pssst;
 import name.pssst.api.PssstException;
@@ -125,9 +125,9 @@ public class Pull extends Activity {
         intervalPaused = Integer.parseInt(preferences.getString("APP_PULL_INTERVAL_PAUSED", "30"));
         mBox = preferences.getString("APP_DEFAULT_BOX", Pssst.getDefaultBox());
 
-        if (!mBox.equals(Pssst.getDefaultBox())) {
+        if (mBox != null && !mBox.equals(Pssst.getDefaultBox())) {
             try {
-                getActionBar().setTitle(new Name(mPssst.getUsername(), mBox).toString());
+                actionbar.setTitle(new Name(mPssst.getUsername(), mBox).toString());
             } catch (PssstException e) {
                 Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
             }
@@ -236,6 +236,7 @@ public class Pull extends Activity {
         if (network != null && network.isConnectedOrConnecting()) {
             new name.pssst.app.task.Pull(Pull.this, new Callback() {
                 @Override
+                @SuppressWarnings("unchecked")
                 public void execute(Object param) {
                     for (Message message: ((ArrayList<Message>) param)) {
                         mAdapter.add(message);
@@ -361,7 +362,7 @@ public class Pull extends Activity {
             final TextView user = (TextView) convertView.findViewById(R.id.user);
             final TextView time = (TextView) convertView.findViewById(R.id.time);
 
-            final SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.yy HH:mm");
+            final SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.yy HH:mm", Locale.getDefault());
             format.setTimeZone(Calendar.getInstance().getTimeZone());
 
             try {
