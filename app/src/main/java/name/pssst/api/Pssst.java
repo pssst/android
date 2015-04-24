@@ -83,11 +83,11 @@ public final class Pssst {
 
     /**
      * Returns client identifier.
-     * @return Canonical name
+     * @return Client identifier
      */
     @Override
     public final String toString() {
-        return String.format("Pssst %s", VERSION);
+        return "Pssst " + VERSION;
     }
 
     /**
@@ -109,7 +109,7 @@ public final class Pssst {
     }
 
     /**
-     * Sets the Pssst Server.
+     * Sets the Pssst server.
      * @param server Pssst server
      */
     public static void setServer(String server) {

@@ -27,9 +27,9 @@ import name.pssst.api.PssstException;
 public final class Message {
     private static final String DEFAULT_ENCODING = "UTF_8";
 
-    protected final byte[] mData;
-    protected final String mUser;
-    protected final long mTime;
+    private final byte[] mData;
+    private final String mUser;
+    private final long mTime;
 
     /**
      * Constructs a new Message from the data, user name and time.

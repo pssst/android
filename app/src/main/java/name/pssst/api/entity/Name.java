@@ -25,8 +25,8 @@ public final class Name {
     private static final String PATTERN = "^(pssst\\.)?\\w{2,63}(\\.\\w{2,63})?$";
     private static final String SERVICE = "pssst";
 
-    protected final String mUser;
-    protected final String mBox;
+    private final String mUser;
+    private final String mBox;
 
     /**
      * Constructs a new Name from the user and box name.
