@@ -37,10 +37,10 @@ import name.pssst.api.internal.command.Push;
  * Pssst API low level communication class.
  */
 public final class Pssst {
-    private static final String FINGERPRINT = "5A749F99DBC2A03B0CDE327BAFCF9BD7DC616830";
+    private static final String FINGERPRINT = "CDD39BED344C7A812DED0655047778E367DE15DB";
     private static final String DEFAULT_API = "https://api.pssst.name";
     private static final String DEFAULT_BOX = "box";
-    private static final String VERSION = "0.2.38";
+    private static final String VERSION = "0.2.41";
 
     private static String sServer = DEFAULT_API;
     private static String sDirectory = ".";

@@ -57,7 +57,7 @@ import name.pssst.api.internal.entity.RsaData;
  * Internal key class providing cryptographic methods.
  */
 public final class Key {
-    private static final int RSA_KEY_SIZE = 4096;
+    private static final int RSA_KEY_SIZE = 2048;
     private static final int AES_KEY_SIZE = 32;
     private static final int AES_IV_SIZE = 16;
     private static final int NONCE_SIZE = AES_KEY_SIZE + AES_IV_SIZE;
@@ -65,10 +65,10 @@ public final class Key {
     private static final String RSA_ALGORITHM = "RSA";
     private static final String AES_ALGORITHM = "AES";
     private static final String SHA_ALGORITHM = "SHA1";
-    private static final String RSA_SIGNATURE = "SHA512withRSA";
+    private static final String RSA_SIGNATURE = "SHA256withRSA";
     private static final String RSA_CIPHER = "RSA/ECB/OAEPWithSHA1AndMGF1Padding";
     private static final String AES_CIPHER = "AES/CFB8/NOPADDING";
-    private static final String MAC_CIPHER = "HmacSHA512";
+    private static final String MAC_CIPHER = "HmacSHA256";
     private static final String PEM_CIPHER = "DES-EDE3-CBC";
 
     private final KeyPair mKey;
