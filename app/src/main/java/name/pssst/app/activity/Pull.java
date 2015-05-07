@@ -417,8 +417,9 @@ public class Pull extends Activity {
 
                     final Notification newMessage = new Notification.Builder(Pull.this)
                             .setContentIntent(PendingIntent.getActivity(Pull.this, 0, intent, 0))
-                            .setContentTitle(getResources().getString(R.string.app_name))
-                            .setContentText(String.format("New message from %s", message.getUsername()))
+                            .setContentTitle(message.getUsername())
+                            .setContentText(message.getMessage())
+                            .setStyle(new Notification.BigTextStyle().bigText(message.getMessage()))
                             .setSmallIcon(R.drawable.ic_stat_app)
                             .setDefaults(Notification.DEFAULT_ALL)
                             .setPriority(Notification.PRIORITY_HIGH)

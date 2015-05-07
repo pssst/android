@@ -10,7 +10,8 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
               tools:context="name.pssst.app.activity.Login"
-              android:weightSum="1">
+              android:weightSum="1"
+    >
 
     <EditText
         android:id="@+id/username"
@@ -30,42 +31,49 @@
         android:maxLines="1"
         android:singleLine="true"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp">
-
-        <Button
-            android:id="@+id/create"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_create"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            style="?android:textAppearanceSmall"
-            android:textStyle="bold"/>
-
-        <Button
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_login"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            style="?android:textAppearanceSmall"
-            android:textStyle="bold"/>
-
-    </LinearLayout>
-
     <TextView
         android:id="@+id/warning"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/password_warning"
+        android:gravity="top"
         android:layout_weight="1"
-        android:gravity="bottom"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/create"
+            android:text="@string/button_create"
+            android:textStyle="bold"
+            android:background="@color/highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/button_margin"
+            style="?android:textAppearanceSmall"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/login"
+            android:text="@string/button_login"
+            android:textStyle="bold"
+            android:background="@color/highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/button_margin"
+            style="?android:textAppearanceSmall"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
 </LinearLayout>
