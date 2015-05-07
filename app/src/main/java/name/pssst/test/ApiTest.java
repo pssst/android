@@ -31,10 +31,13 @@ import name.pssst.api.entity.Name;
 
 /**
  * API unit tests
+ *
+ * To use this unit tests, the app must be started once on the device
+ * to created the necessary directories.
  */
 @SuppressLint("SdCardPath")
 public final class ApiTest extends AndroidTestCase {
-    private final static String USER_DIRECTORY = "/data/data/name.pssst.app/files"; // TODO: Create own test directory
+    private final static String USER_DIRECTORY = "/data/data/name.pssst.app/files";
     private final static String SERVER_ADDRESS = "https://dev.pssst.name";
 
     private final List<String> usernames = new ArrayList<>();
