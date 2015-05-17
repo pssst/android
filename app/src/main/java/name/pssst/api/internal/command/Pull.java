@@ -45,6 +45,10 @@ public final class Pull {
         mBox = box;
     }
 
+    /**
+     * Constructs the command.
+     * @param user User name
+     */
     public Pull(String user) {
         this(user, null);
     }

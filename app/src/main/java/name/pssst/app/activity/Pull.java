@@ -87,10 +87,9 @@ public class Pull extends Activity {
         setContentView(activity_pull);
 
         mApp = (App) getApplication();
-        mBox = mApp.getPssstBox();
         mPssst = mApp.getPssstInstance();
         mHandler = new Handler();
-        mAdapter = new MessageAdapter(this, mApp.getPssstMessages(mBox));
+        mAdapter = new MessageAdapter(this, mApp.getPssstMessages());
         mAdapter.registerDataSetObserver(new MessageObserver());
 
         final ActionBar actionbar = getActionBar();

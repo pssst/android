@@ -17,8 +17,6 @@
 package name.pssst.app;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import name.pssst.api.Pssst;
 import name.pssst.api.entity.Message;
@@ -27,9 +25,8 @@ import name.pssst.api.entity.Message;
  * Global application state.
  */
 public final class App extends android.app.Application {
-    private Map<String, ArrayList<Message>> mPssstMessages = new HashMap<>();
+    private ArrayList<Message> mPssstMessages = new ArrayList<>();
     private Pssst mPssstInstance = null;
-    private String mPssstBox = null;
     private boolean mIsVisible = true;
 
     /**
@@ -37,9 +34,7 @@ public final class App extends android.app.Application {
      */
     public void clearPssstData() {
         mPssstInstance = null;
-        mPssstBox = null;
-
-        mPssstMessages = new HashMap<>();
+        mPssstMessages = new ArrayList<>();
     }
 
     /**
@@ -59,32 +54,11 @@ public final class App extends android.app.Application {
     }
 
     /**
-     * Sets the current Pssst box.
-     * @param box Pssst box
-     */
-    public void setPssstInstance(String box) {
-        mPssstBox = box;
-    }
-
-    /**
-     * Returns the current Pssst box.
-     * @return Pssst box
-     */
-    public String getPssstBox() {
-        return mPssstBox;
-    }
-
-    /**
      * Returns the received Pssst messages.
-     * @param box Box
      * @return Pssst messages
      */
-    public ArrayList<Message> getPssstMessages(String box) {
-        if (mPssstMessages.get(box) == null) {
-            mPssstMessages.put(box, new ArrayList<Message>());
-        }
-
-        return mPssstMessages.get(box);
+    public ArrayList<Message> getPssstMessages() {
+        return mPssstMessages;
     }
 
     /**
