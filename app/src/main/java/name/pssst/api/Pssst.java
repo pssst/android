@@ -40,7 +40,7 @@ public final class Pssst {
     private static final String FINGERPRINT = "CDD39BED344C7A812DED0655047778E367DE15DB";
     private static final String DEFAULT_API = "https://api.pssst.name";
     private static final String DEFAULT_BOX = "box";
-    private static final String VERSION = "0.2.41";
+    private static final String VERSION = "0.2.42";
 
     private static String sServer = DEFAULT_API;
     private static String sDirectory = ".";

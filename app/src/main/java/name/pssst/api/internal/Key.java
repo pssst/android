@@ -67,7 +67,7 @@ public final class Key {
     private static final String SHA_ALGORITHM = "SHA1";
     private static final String RSA_SIGNATURE = "SHA256withRSA";
     private static final String RSA_CIPHER = "RSA/ECB/OAEPWithSHA1AndMGF1Padding";
-    private static final String AES_CIPHER = "AES/CFB8/NOPADDING";
+    private static final String AES_CIPHER = "AES/CBC/PKCS7PADDING";
     private static final String MAC_CIPHER = "HmacSHA256";
     private static final String PEM_CIPHER = "DES-EDE3-CBC";
 
